@@ -1,0 +1,227 @@
+@use '../abstracts/' as *;
+
+@use '../components/' as *;
+
+@media (min-width: 550px){
+    :root{
+        font-size: 1rem;
+        --padding-block: 2rem;
+        --padding-inline: 4.5rem;
+
+        --nav-sz: 1.3em;
+}
+}
+
+@media (min-width: 650px){
+    :root{
+        font-size: 1rem;
+        --padding-block: 3rem;
+        --padding-inline: 5.5rem;
+
+        --nav-sz: 1.3em;
+      }
+
+      p {
+          max-width: 500px;
+      }
+    
+
+}
+
+@media (min-width: 925px){
+    :root{
+        font-size: 1rem;
+        --padding-block: 2rem;
+        --padding-inline: 8rem;
+
+        --nav-sz: .8em;
+        --text-sz: .825em;
+        --title-sz: 1.2em;
+        --logo-sz: .85em;
+
+        --subtitle-sz: .75em;
+        --link-sm-sz: .75em;
+        --link-bg-sz: 1em;
+
+    
+        --text-lh: 1.5rem;
+    }
+
+    //top navigation
+
+    .open {
+        display: none;
+
+        &__icon {
+        display: none;
+        }    
+    }
+
+    .top {
+        &__nav {
+            height: 100%;
+            width: 55%;
+            transform: translateX(0);
+
+            position: static;
+
+            &__list {
+                padding-left: 0px;
+                height: 100%;
+                width: 100%;
+                gap: 2rem;
+                
+                flex-direction: row;
+                text-transform: lowercase;
+                margin-right: -5px;
+            }
+
+            &__item{
+                &--resume {
+                    color: $redC;
+                    margin-right: 5px;
+                    transition: transform 100ms ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+
+    //about me
+
+    * + .about * {
+        margin-bottom: 0; //reset
+    }
+    .about__img + * { //reset
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .about__wrapper{
+        min-height: 550px;
+        max-height: 80vh;
+        @include flexPr(column, space-evenly, center);
+        z-index: 0;
+    }
+
+    .about {
+        @include container(0, .4rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding-top: 6rem;
+
+        & h2 {
+            display: none;
+        }
+
+        &__img {
+            display: none;
+            &--pc {
+                display: block;
+            }
+        }
+        &__desc {
+            @include mobileTextPr;
+            width: 100%;
+    
+        }
+    }
+
+    //projects
+
+
+    
+    .projects {
+        img{
+            width: 230px; 
+        }
+    }
+ 
+    .my-projects {
+        @include flexPr(row, space-between, center);
+        @include container(1em, 3rem);
+        @include linebtm;
+
+        & > h2{
+            @include mobileTitlePr;
+        }
+
+        &--right {
+            @include flexPr(row, space-between, center);
+            gap: 3rem;
+            font-weight: 300;
+            color: rgba($blackC, .6)
+        }
+    }
+    
+
+
+    .project-pc-wrapper {
+        @include container(0, 2rem);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .project {
+        padding: 0; margin: 0 0 4.5em 0;
+        flex-basis: 47%;
+        flex-grow: 0;
+        flex-shrink: 2;
+        border: 0;;
+
+    
+            &__link {
+                margin-block: 1.25em;
+            }  
+        height: fit-content;   
+    }
+
+    .project > * {
+        height: fit-content;
+    }
+
+    .project--ussr__mockup {
+        justify-self: flex-start;
+        margin: 0;
+        flex-basis: 25%;
+        flex: 1 1 25%;
+    }
+
+    .project--westminster__mockup {
+        margin-bottom: 0; 
+        justify-self: flex-start; 
+
+       
+    }
+
+        .project--athens__mockup {
+        justify-self: flex-start;
+        margin: 0;
+
+        & > img {
+            width: 270px;
+        }
+    }
+
+        .project--magazine__mockup {
+        justify-self: flex-start;
+        margin: 0;
+    }
+
+    .project--album {
+        flex-basis: 100%;
+        &__mockup {
+            margin: 0;
+        }
+        & > p {
+            max-width: 100%;
+        }
+    }
+
+
+}

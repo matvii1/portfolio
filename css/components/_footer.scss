@@ -1,0 +1,11 @@
+@use '../abstracts/' as *; 
+
+.footer {
+    @include flexPr (column, center, center);
+    @include container(.3rem, 0);
+
+    &__desc {
+        margin-top: .3rem;
+    }
+ 
+}

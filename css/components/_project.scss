@@ -1,0 +1,269 @@
+@use '../abstracts/' as *;
+
+.my-projects {display: none} //only for pc
+
+.project--ussr {
+    @include container(0, 2rem);
+    @include linebtm;
+    display: grid;
+    row-gap: 1.2em;
+
+
+		&__title {
+            @include mobileTitlePr;
+            @include flexPr(none, none, center);
+            @include projectDec($blackC)
+		}
+
+
+		&__subtitle {
+            @include mobileSubTitlePr;
+		}
+
+
+		&__desc {
+            @include mobileTextPr;
+		}
+
+		&__link {
+            @include mobileLinkPr; //with icon
+            @include flexPr(row, space-between, center);
+            @include hoverAreaForProjectLinks;
+
+            &::after{
+                @include icon('\f178', $blackC);
+                font-size: 2em;
+            }
+		}
+
+        
+        &__mockup {
+            margin-bottom: 2.5rem;
+            justify-self: center;
+
+            img{
+                width: 100%;
+            }
+		}
+}
+
+.project--westminster {
+    @include container(0, 2rem);
+    @include linebtm;
+    position: relative;
+    display: grid;
+    row-gap: 1.2em;
+
+
+		&__title {
+            @include mobileTitlePr;
+            @include flexPr(none, none, center);
+            @include projectDec($blueC)
+		}
+
+
+		&__subtitle {
+            @include mobileSubTitlePr;
+		}
+
+
+		&__desc {
+            @include mobileTextPr;
+		}
+
+		&__link {
+            @include mobileLinkPr; //with icon
+            @include flexPr(row, space-between, center);
+            @include hoverAreaForProjectLinks;
+
+            &::after{
+                @include icon('\f178', $blueC);
+                font-size: 2em;
+            }
+		}
+
+        
+        &__mockup {
+            margin-bottom: 2.5rem;
+            justify-self: center;
+
+            img{
+                width: 100%;
+            }
+		}
+}
+
+.project--athens {
+    @include container(0, 2rem);
+    @include linebtm;
+    position: relative;
+    display: grid;
+    row-gap: 1.2em;
+
+
+		&__title {
+            @include mobileTitlePr;
+            @include flexPr(none, none, center);
+            @include projectDec($redC)
+		}
+
+
+		&__subtitle {
+            @include mobileSubTitlePr;
+		}
+
+
+		&__desc {
+            @include mobileTextPr;
+		}
+
+		&__link {
+            @include mobileLinkPr; //with icon
+            @include flexPr(row, space-between, center);
+            @include hoverAreaForProjectLinks;
+
+            &::after{
+                @include icon('\f178', $redC);
+                font-size: 2em;
+            }
+		}
+
+        
+        &__mockup {
+            margin-bottom: 2.5rem;
+            justify-self: center;
+
+            img{
+                width: 100%;
+            }
+		}
+}
+
+.project--magazine {
+    @include container(0, 2rem);
+    @include linebtm;
+    position: relative;
+    display: grid;
+    row-gap: 1.2em;
+
+
+		&__title {
+            @include mobileTitlePr;
+            @include flexPr(none, none, center);
+            @include projectDec($orangeC)
+		}
+
+
+		&__subtitle {
+            @include mobileSubTitlePr;
+		}
+
+
+		&__desc {
+            @include mobileTextPr;
+		}
+
+		&__link {
+            @include mobileLinkPr; //with icon
+            @include flexPr(row, space-between, center);
+            @include hoverAreaForProjectLinks;
+
+            &::after{
+                @include icon('\f178', $orangeC);
+                font-size: 2em;
+            }
+		}
+
+        
+        &__mockup {
+            margin-bottom: 2.5rem;
+            justify-self: center;
+
+            img{
+                width: 100%;
+            }
+		}
+
+        
+}
+
+.project--album {
+    @include container(0, 2rem);
+    @include linebtm;
+    position: relative;
+    display: grid;
+    row-gap: 1.2em;
+
+
+		&__title {
+            @include mobileTitlePr;
+            @include flexPr(none, none, center);
+            @include projectDec($greenC)
+		}
+
+
+		&__subtitle {
+            @include mobileSubTitlePr;
+		}
+
+
+		&__desc {
+            @include mobileTextPr;
+		}
+
+		&__link {
+            @include mobileLinkPr; //with icon
+            @include flexPr(row, space-between, center);
+            @include hoverAreaForProjectLinks;
+
+            &::after{
+                @include icon('\f178', $greenC);
+                font-size: 2em;
+            }
+		}
+
+        
+        &__mockup {
+            margin-bottom: 2.5rem;
+            margin-left: -1.5rem;
+
+            // justify-self: center;
+
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(5, 18rem);
+            grid-gap: .4rem;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+
+            img{
+                width: 100%;
+                align-self: center;
+                justify-self: center;
+                scroll-snap-align: start;
+                margin-bottom: 1.2rem; //push down the scrollbar
+            }
+
+            &--cover {
+                max-width: 90%;
+            }
+            // &--photo {
+            //     max-width: 60%;
+            // }
+		}
+        &__mockup::-webkit-scrollbar {
+            height: .45rem;
+          }
+          &__mockup::-webkit-scrollbar-thumb {
+            background: rgba($greenC, .5);
+            border-radius: 100px;
+            margin-inline: 2rem;
+          }
+          &__mockup::-webkit-scrollbar-track {
+              background: rgba(black, .1);
+              height: .4em;
+              border-radius: 100px;
+          }
+
+}
+

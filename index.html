@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font SORA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+    <!--/ font SORA -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Matvii Kharchenko </title>
+</head>
+
+<body>
+    <section class="top">
+
+        <div class="top__logo">
+            Matvii Kharchenko
+        </div>
+
+        <span class="open"> <!-- >add active in jss--> 
+            <span class="open__icon"></span>
+        </span>
+
+        <nav class="top__nav">
+            <ul class="top__nav__list">
+                <li class="top__nav__item">
+                    <a class="scroll__link" data-goto=".about" href="#">
+                    About me
+                    </a>
+                </li>
+                <li class="top__nav__item">
+                    <a class="scroll__link" data-goto=".projects" href="#">
+                        See my work
+                    </a>
+                </li>
+                <li class="top__nav__item">
+                    <a class="scroll__link" data-goto=".contact" href="#">
+                    Contact
+                    </a>
+                </li>
+                <li class="top__nav__item top__nav__item--resume ">
+                    <a target="_blank" href="https://drive.google.com/file/d/1GvAKGtQKbzLqRxhH2V8mjzPsxJQ7oGr2/view?usp=sharing">
+                        My resume
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </section>
+
+    <section class="about">
+        <h2 class="about__title">About me</h2>
+        <div class="about__wrapper"> <!--wrapper for PC-->
+            <img class="about__img" src="./images/me.jpg" alt="photo of me">
+            <img class="about__img--pc" src="./images/me-pc-1.png" alt="photo of me">
+            <p class="about__desc">
+                Matvii Kharchenko is an Ukrainian junior web-developer and disegner based in Kyiv. 
+            </p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <!-- PC ONLY -->
+        <div class="my-projects">
+            <h2>My projects</h2>
+            <div class="my-projects--right">
+                <span class="my-projects__item">
+                    <a class="scroll__link" data-goto=".project--ussr">Web</a>
+                </span>
+                
+                <span class="my-projects__item">
+                    <a class="scroll__link" data-goto=".project--album">Layout</a>
+                </span>
+            </div>
+        </div>
+        <!-- /PC ONLY -->
+        
+
+        <!-- PC WRAPPER-->
+        <div class="project-pc-wrapper">
+            <div class="project--ussr project">
+                <h1 class="project--ussr__title">
+                    USSR
+                </h1>
+    
+                <p class="project--ussr__subtitle">
+                    WEBSITE from scratch!
+                </p>
+    
+                <p class="project--ussr__desc">
+                    Back in school days me as a main designer and content maker, and my classmates made a website about terrific USSR times.
+                </p>
+    
+                <a href="https://readymag.com/u2498287502/2750294/" target="_blank" class="project--ussr__link">
+                    View Project
+                </a>
+    
+                <div class="project--ussr__mockup">
+                    <img class="project--ussr__mockup--device" src="./images/USSRmockup.png" 
+                    alt="laptop showing the design of the USSR web page">
+                </div>
+            </div>
+    
+            <div class="project--westminster project">
+                <h1 class="project--westminster__title">
+                    Westminster College
+                </h1>
+    
+                <p class="project--westminster__subtitle">
+                    WEBSITE re-DESIGN
+                </p>
+    
+                <p class="project--westminster__desc">
+                    I was looking for a project idea so I took my gierlfriend's bad looking college website and re-designed it for both mobile and PC.
+                </p>
+    
+                <a href="https://matvii1.github.io/ww/" target="_blank" class="project--westminster__link">
+                    View Project
+                </a>
+    
+                <div class="project--westminster__mockup">
+                    <img class="project--westminster__mockup--device" src="./images/westminsterdevices.png" 
+                    alt="laptop showing the design of the Westminster web page">
+                </div>
+            </div>
+    
+            <div class="project--athens project">
+                <h1 class="project--athens__title">
+                    Athens School 
+                </h1>
+    
+                <p class="project--athens__subtitle">
+                    WEBSITE re-DESIGN
+                </p>
+    
+                <p class="project--athens__desc">
+                    Since I never liked my schools’ website when I was at school, I got inspired and completely re-designed the main web page keeping the initial style 
+                </p>
+    
+                <a href="https://www.figma.com/proto/HtQDFYatI0at7clYhSikB5/athens%2Fschool?page-id=0%3A1&node-id=22%3A38&viewport=463%2C504%2C0.08&scaling=scale-down" target="_blank" class="project--athens__link">
+                    View Project
+                </a>
+    
+                <div class="project--athens__mockup">
+                    <img class="project--athens__mockup--device" src="./images/athensdevices.png" 
+                    alt="laptop showing the design of the Athens web page">
+                </div>
+            </div>
+    
+            <div class="project--magazine project">
+                <h1 class="project--magazine__title">
+                    Magazine
+                </h1>
+    
+                <p class="project--magazine__subtitle">
+                    A magazine about people's identities
+                </p>
+    
+                <p class="project--magazine__desc">
+                    This is a magazine made as a school project is written on four different languages.  The whole class was making the content for the magazine, and each member had to write an article. We were given an absolute freedom in terms of content and language. This magazine shows how different people are.
+                </p>
+    
+                <a href="https://drive.google.com/file/d/1eP3sUEtz7t29tRN2vZ3IG94MepmoQ7N1/view?usp=sharing" target="_blank" class="project--magazine__link">
+                    View Project
+                </a>
+    
+                <div class="project--magazine__mockup">
+                    <img class="project--magazine__mockup--device" src="./images/magazineDevices.png" 
+                    alt="laptop showing the design of the magazine">
+                </div>
+            </div>
+    
+            <div class="project--album project">
+                <h1 class="project--album__title">
+                    Photo Album
+                </h1>
+    
+                <p class="project--album__subtitle">
+                    creative album for our class
+                </p>
+    
+                <p class="project--album__desc">
+                    The idea of this project was born at the end of the last school year. My classmates and I decided that we wanted to keep the memories of our friendship and carefree school days. Since we didn't want the usual boring school album of portraits in school uniform, we decided to find a photographer/designer to make an unusual and memorable album that would not be forgotten for years laying somewhere in an old closet. 
+                </p>
+    
+                <a href="https://drive.google.com/file/d/1YyEzSQrciEWk4GuMPdDOvFkIYQiiTZjI/view?usp=sharing" target="_blank" class="project--album__link">
+                    View Project
+                </a>
+    
+                <div class="project--album__mockup">
+                    <img class="project--album__mockup--cover" src="./images/album-covers.png" 
+                    alt="album covers">
+    
+                    <img class="project--album__mockup--photo" src="./images/album-photo-6.png" 
+                    alt="album photo">
+    
+                    <img class="project--album__mockup--photo" src="./images/album-photo-2.png" 
+                    alt="album photo">
+    
+                    <img class="project--album__mockup--photo" src="./images/album-photo.png" 
+                    alt="album photo">
+    
+                    <img class="project--album__mockup--photo" src="./images/album-photo-4.png" 
+                    alt="album photo">
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contact">
+        <h2 class="contact__title">Contact</h2>
+
+        <ul class="contact__list">
+            <li class="contact__item">
+                <a href="https://t.me/matviiiiii" target="_blank" class="contact__item--link">
+                    Telegram
+                </a>
+            </li>
+
+            <li class="contact__item">
+                <a href="https://www.instagram.com/matwvey/" target="_blank" class="contact__item--link">
+                    Instagram
+                </a>
+            </li>
+
+            <li class="contact__item">
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=matviy.kharchenko@gmail.com" target="_blank"  class="contact__item--link">
+                    matviy.kharchenko@gmail.com
+                </a>
+            </li>
+
+            <li class="contact__item">
+                <a href="https://www.facebook.com/profile.php?id=100009551652422" target="_blank" class="contact__item--link">
+                    Facebook
+                </a>
+            </li>
+
+            <li class="contact__item">
+                <a href="https://twitter.com/H2fpPIRbVzov81T" target="_blank" class="contact__item--link">
+                    Twitter
+                </a>
+            </li>
+
+            <li class="contact__item">
+                <a href="https://drive.google.com/file/d/1GvAKGtQKbzLqRxhH2V8mjzPsxJQ7oGr2/view?usp=sharing" target="_blank" class="contact__item--link">
+                    My resume
+                </a>
+            </li>
+        </ul>
+
+        <div class="contact__icons">
+            <a href="https://t.me/matviiiiii" target="_blank">
+                <i class="fa-brands fa-telegram contact__icon"></i>
+            </a>
+
+            <a href="https://www.instagram.com/matwvey/" target="_blank">
+                <i class="fa-brands fa-instagram contact__icon"></i>
+            </a>
+
+            <a href="https://twitter.com/H2fpPIRbVzov81T" target="_blank">
+                <i class="fa-brands fa-twitter contact__icon"></i>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=100009551652422" target="_blank">
+                <i class="fa-brands fa-facebook contact__icon"></i>
+            </a>
+
+            <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=matviy.kharchenko@gmail.com" target="_blank">
+                <i class="fa-regular fa-inbox contact__icon"></i>                              
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- onClick="topFunction()" -->
+        <a href="#top"> 
+            <img calss="footer__icon" src="./images/smile__footer.svg" alt="smile icon">
+        </a>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>

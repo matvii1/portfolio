@@ -1,0 +1,99 @@
+
+@use 'fonts' as *;
+@use 'colors' as *;
+@use 'wrapper' as *;
+
+@mixin fontPr ($f, $fw, $c){
+    font-size: $f;
+    font-weight: $fw;
+    color: $c;
+} //not using this one
+
+@mixin flexPr($dir, $just, $align){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+} //FLEX
+
+
+//MOBILE TEXT PROPERTIES
+@mixin mobileTextPr () {
+    line-height: var(--text-lh);
+    font-size: $mobileTextsz;
+}
+
+@mixin mobileTitlePr () {
+    font-size: $mobileTitlesz;
+    padding-left: .5em;
+}
+
+@mixin mobileSubTitlePr() {
+    color: $lightBlackC;
+    font-size: $mobileSubTitlesz;
+    text-transform: uppercase;
+}
+
+@mixin mobileLinkPr() {
+    display: inline-block;
+    font-size: $mobileLinksz;
+    font-weight: bold;
+    width: fit-content;
+}
+
+@mixin contactLinkPr(){
+    font-size: $mobileLinkContactsz;
+    text-decoration: underline;
+}
+
+//ICONS
+@mixin icon($content, $color) {
+        content: $content;
+        font-weight: 900;
+        font-size: 1em;
+        color: $color;
+        position: absolute;
+        right: -15px;
+        padding-block: 1.5em;
+
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+}
+@mixin hoverAreaForProjectLinks {
+    padding-block: 1.5em;
+    padding-right: 30px;
+    position: relative;
+}
+
+
+//LINE BOTTOM
+@mixin linebtm () {
+    border-bottom: 1px solid $lightBlackC;
+}
+
+//DECORATION FOR TITLES
+@mixin projectDec($col) {
+    // content: '';
+    // border-right: 5px solid;
+    // color: $col;
+    // position: absolute;
+    // display: block;
+    // height: 1em;
+    // left: var(--padding-inline);
+
+    border-left: 6px solid $col;
+    // bottom: 0;
+    // top: 0
+}
+
+//CONTAINER
+@mixin container ($block, $bot: 1.4rem) {
+    padding-block: var(--padding-block);
+    padding-inline: var(--padding-inline);
+    padding-block: $block;
+    margin-bottom: $bot;
+}

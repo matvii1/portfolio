@@ -1,0 +1,123 @@
+@use '../abstracts' as *;
+
+.top {
+    @include container(1.2rem);
+    @include linebtm;
+    @include flexPr(row, space-between, center);
+    position: fixed;
+    width: 100%;
+    background: $mainC;
+    z-index: 1000;
+
+    &__logo {
+        font-size: $mobileLogosz;
+        font-weight: 300;
+        cursor: pointer;
+    }
+
+    &__nav {
+        height: 100vh;
+        display: flex;
+        
+        position: fixed;
+        overflow: hidden;
+        z-index: 2;
+        top: 0; bottom: 0; left: 0; right: 0;
+        
+        background: $mainC;
+        color: $blackC;
+
+        transform: translateX(100%);
+        transition: transform 300ms ease-in-out;
+
+        &__list {
+            align-self: center;
+            padding-left: var(--padding-inline);
+            font-size: $mobileNavsz;
+            height: 25%;
+            @include flexPr(column, space-between, flex-start);
+        }
+    }
+}
+
+.lock {
+    overflow: hidden; //prevent scrolling while menu is opened
+}
+
+.active {
+    transform: translateX(0);
+}
+
+//custom burger menu
+
+.open {
+    position: static;
+    z-index: 100;
+    right: 1.5em;
+    top: 1.2rem;
+
+    width: 22px;
+    height: 26px;
+}
+
+.open__icon {
+    width: 20px;
+    height: 3px;
+
+    transform: translateY(10px);
+    // left: 2px;
+
+    background: $blackC;
+    position: absolute;
+    border-radius: 100px;
+}
+
+.open__icon::before, .open__icon::after {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background: $blackC;
+
+    position: absolute;
+    border-radius: 100px;
+    transition-property: width, transform;
+    transition: 250ms ease-in-out;
+}
+
+.open__icon::before {
+    top: 10px;
+}
+.open__icon::after {
+    bottom: 10px;
+}
+
+
+//rotating
+.active .open__icon {
+    width: 0;
+
+    
+}
+.active .open__icon::after {
+    transform: rotate(-135deg);
+    width: 25px;
+    bottom: 0px;
+    left: -2px;
+    background: hsl(240, 100%, 50%);
+    // transform: translateY(10px)
+
+    
+}
+
+.active .open__icon::before {
+    transform: rotate(135deg);
+    width: 25px;
+    top: 0px;
+    left: -2px;
+    background: hsl(60, 100%, 50%);
+    
+}
+
+
+
+

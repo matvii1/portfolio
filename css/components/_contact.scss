@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+
+
+.contact {
+    @include container(0, .5rem);
+    @include linebtm;
+    display: grid;
+    grid-gap: 1.5em;
+
+    &__title {
+        @include mobileTitlePr;
+        @include flexPr(row, none, center);
+        @include projectDec($purpleC)
+    }   
+
+    &__list {
+        display: grid;
+        grid-gap: 1.4em;
+    }
+
+    &__item--link {
+        @include contactLinkPr;
+    }
+
+    &__icons {
+        @include flexPr(row, none, center);
+        font-size: 1.45rem;
+        margin: 1.25rem 0 1.5rem 0;
+        gap: 2.3rem;
+    }
+}
+
+.fa-inbox {
+    font-weight: 900;
+}

@@ -1,0 +1,29 @@
+$primaryF: 'Sora', sans-serif;
+
+:root {
+    font-size: 1rem;
+
+    --nav-sz: 1.25em;
+    --text-sz: .825em;
+    --title-sz: 1.5em;
+    --subtitle-sz: .9em;
+    --link-sm-sz: .875em;
+    --link-bg-sz: 1.1em;
+    --logo-sz: 1.2em;
+
+    --text-lh: 1.5rem;
+}
+
+$mobileNavsz: var(--nav-sz); //20px;
+
+$mobileTextsz: var(--text-sz); //17px;
+
+$mobileTitlesz: var(--title-sz); //around 24px;
+
+$mobileSubTitlesz: var(--subtitle-sz); //around 15px;
+
+$mobileLinksz: var(--link-sm-sz); //14px;
+
+$mobileLinkContactsz: ar(--link-bg-sz);
+
+$mobileLogosz: var(--logo-sz);

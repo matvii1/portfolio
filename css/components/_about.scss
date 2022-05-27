@@ -1,0 +1,44 @@
+
+@use '../abstracts/' as *;
+
+
+* + .about * {
+    margin-bottom: 1.5em;
+}
+.about__img + * {
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+
+.about {
+    @include linebtm;
+    @include container(0, 2rem);
+    padding-top: 6rem;
+    
+    &__wrapper {
+        @include flexPr(column, space-between, flex-start);
+   }
+
+    &__title {
+        @include mobileTitlePr;
+    }
+
+    &__img {
+        object-fit: cover;
+        position: center;
+        height: 200px;
+        align-self: center;
+
+        &--pc {
+            display: none;
+        }
+    }
+
+    &__desc {
+        @include mobileTextPr;
+        width: 70%;
+        align-self: center;
+        text-align: center;
+
+    }
+}

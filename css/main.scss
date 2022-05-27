@@ -1,0 +1,23 @@
+
+@use './reset/reset';
+@use './abstracts' as *;
+
+@use './components/nav';
+@use './components/about';
+@use './components/project';
+@use './components/contact';
+@use './components/footer';
+
+@use './components/breakpoints';
+
+:root {scroll-behavior: smooth;}
+body {font-family: $primaryF, "Helvetica", sans-serif; overflow-x: hidden;}
+
+
+
+
+
+
+
+
+
