@@ -35,17 +35,17 @@ const menuLinks = document.querySelectorAll('.scroll__link[data-goto]');
             })
 
         resumeLink.addEventListener('click', () => {
-            sidebar.classList.toggle('active')
-            open.classList.toggle('active')
-            body.classList.toggle('lock')
+            sidebar.classList.remove('active')
+            open.classList.remove('active')
+            body.classList.remove('lock')
         })
 
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
-                sidebar.classList.toggle('active')
-                open.classList.toggle('active')
-                body.classList.toggle('lock')
-
+             if (sidebar.classList.contains('active')){
+                 sidebar.classList.remove('active')
+                 open.classList.remove('active')
+                 }
                 
             })
         })
@@ -55,3 +55,4 @@ const menuLinks = document.querySelectorAll('.scroll__link[data-goto]');
             document.documentElement.scrollTop = 0;
 
         }
+
