@@ -195,7 +195,7 @@ select {
   width: 25px;
   bottom: 0px;
   left: -2px;
-  background: hsl(240deg, 100%, 50%);
+  background: black;
 }
 
 .active .open__icon::before {
@@ -203,7 +203,7 @@ select {
   width: 25px;
   top: 0px;
   left: -2px;
-  background: hsl(60deg, 100%, 50%);
+  background: black;
 }
 
 * + .about * {
