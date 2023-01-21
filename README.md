@@ -7,3 +7,5 @@
  - HTML
  - SASS, BEM
  - JavaScipt
+
+Fully responsive web page
